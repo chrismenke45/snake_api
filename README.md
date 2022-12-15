@@ -1,1 +1,1 @@
-This is a rails API to store scores for the snake game I'm building in react.
+This is a rails API to store/fetch scores for the snake game I'm building in react. I am hosting it on Fly.io. The front end repostory can be seen at https://github.com/chrismenke45/snake_client The app can be seen at https://chrismenke45.github.io/snake_client/
