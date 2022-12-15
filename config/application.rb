@@ -1,0 +1,29 @@
+require_relative "boot"
+
+require "rails/all"
+
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
+
+module SnakeApi
+  class Application < Rails::Application
+    #to specify app is an API
+    config.api_only = true
+
+    #to send debug errors as HTML page, use :api option to have it respond with JSON
+    config.debug_exception_response_format = :default
+    #config.debug_exception_response_format = :api
+
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.0
+
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
+  end
+end
